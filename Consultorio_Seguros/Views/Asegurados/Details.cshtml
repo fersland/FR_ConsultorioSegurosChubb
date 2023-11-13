@@ -1,0 +1,40 @@
+﻿@model Consultorio_Seguros.Models.Asegurado
+
+@{
+    ViewData["Title"] = "Asegurados / Ver Información";
+}
+<div class="container py-4">
+    <div class="d-flex justify-content-between">
+        <h4><i class="bi bi-star-fill"></i> @ViewData["Title"]?.ToString()</h4>
+
+        <a asp-action="Index" class="btn btn-info"><i class="bi bi-arrow-return-left"></i> Regresar</a>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body">
+        <dt class = "col-sm-2">Cedula :</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Clientes.Cedula)</dd>
+
+        <dt class="col-sm-2">Nombre Cliente :</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Clientes.Nombre)</dd>
+
+        <dt class = "col-sm-2">Codigo Seguro :</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Seguros.Codigo)</dd>
+
+        <dt class = "col-sm-2">Nombre Seguro :</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Seguros.Nombre)</dd>
+
+        <dt class="col-sm-2">Asegurada :</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Seguros.SemiAsegurada)</dd>
+
+        <dt class="col-sm-2">Prima :</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Seguros.Prima)</dd>
+
+    </dl>
+</div>
+</div>
+</div>
+    </div>
+</div>
