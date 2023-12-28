@@ -1,6 +1,7 @@
 using Consultorio_Seguros.DAL;
 using Consultorio_Seguros.Data;
 using Consultorio_Seguros.Process;
+using Consultorio_Seguros.Servicios;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("name=db"));
 builder.Services.AddScoped<Cliente_DAL>();
 builder.Services.AddScoped<Seguro_DAL>();
+builder.Services.AddScoped<InicioService>();
 
 var app = builder.Build();
 
@@ -30,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Asegurados}/{action=Inicio}/{id?}");
+    pattern: "{controller=Clientes}/{action=Index}/{id?}");
 
 app.Run();

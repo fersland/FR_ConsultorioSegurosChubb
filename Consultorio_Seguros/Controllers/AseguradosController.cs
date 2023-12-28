@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Consultorio_Seguros.Data;
 using Consultorio_Seguros.Models;
+using Consultorio_Seguros.Servicios;
 
 namespace Consultorio_Seguros.Controllers
 {
     public class AseguradosController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly InicioService _service;
 
-        public AseguradosController(AppDbContext context)
+        public AseguradosController(AppDbContext context, InicioService inicioService)
         {
             _context = context;
+            _service = inicioService;
         }
 
         public async Task<IActionResult> Index()
@@ -24,29 +27,16 @@ namespace Consultorio_Seguros.Controllers
             var appDbContext = _context.Asegurados.Include(a => a.Clientes).Include(a => a.Seguros);
             return View(await appDbContext.ToListAsync());
         }
-
+        
+        
         public IActionResult Inicio(string searchBy, string search)
         {
-            if (searchBy == "Cedula")
-            {
-                var appCedula = _context.Asegurados.Include(a => a.Clientes).Include(a => a.Seguros).Where(x => x.Clientes.Cedula == search || search == null);
-                return View(appCedula.ToList());
-                //return View(_context.Asegurados.Where(x => x.Clientes.Cedula == search || search == null).ToList());
-            }
-            else if (searchBy == "Codigo")
-            {
-                var appCodigo = _context.Asegurados.Include(a => a.Clientes).Include(a => a.Seguros).Where(x => x.Seguros.Codigo == search || search == null);
-                return View(appCodigo.ToList());
-            }
-            else
-            {
-                var appDbContext = _context.Asegurados.Include(a => a.Clientes).Include(a => a.Seguros);
-                return View(appDbContext.ToList());
-            }
+            return View(_service.GetAllSearch(searchBy, search));
         }
 
-            // GET: Asegurados/Details/5
-            public async Task<IActionResult> Details(int? id)
+
+        // GET: Asegurados/Details/5
+        public async Task<IActionResult> Details(int? id)
             {
                 if (id == null || _context.Asegurados == null)
                 {
