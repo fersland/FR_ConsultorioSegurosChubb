@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B9G8ui2lvBNITAMIFeUWck+xUlLT2QXX+us6f7M3cGbPMFvCZxln4irL/JCh2l51fWZHyje4jN6BRiJ9lNPPHA==",
+  "dgSpecHash": "rDYtXSrxqVcudTORJ9br6K3WOWgKlYIGFACZW2v9/RAAyQNIXkjl36+3xI9I6YnE3dYsdXAD5XL0kV9WjVKPWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fersl\\Desktop\\Consultorio_SegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
+  "projectFilePath": "C:\\Users\\fersl\\Documents\\GitHub\\Consultorio_Seguros_EF\\FR_ConsultorioSegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fersl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\fersl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -11502,11 +11502,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fersl\\Desktop\\Consultorio_SegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
+      "projectUniqueName": "C:\\Users\\fersl\\Documents\\GitHub\\Consultorio_Seguros_EF\\FR_ConsultorioSegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
       "projectName": "Consultorio_Seguros",
-      "projectPath": "C:\\Users\\fersl\\Desktop\\Consultorio_SegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
+      "projectPath": "C:\\Users\\fersl\\Documents\\GitHub\\Consultorio_Seguros_EF\\FR_ConsultorioSegurosChubb\\Consultorio_Seguros\\Consultorio_Seguros.csproj",
       "packagesPath": "C:\\Users\\fersl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fersl\\Desktop\\Consultorio_SegurosChubb\\Consultorio_Seguros\\obj\\",
+      "outputPath": "C:\\Users\\fersl\\Documents\\GitHub\\Consultorio_Seguros_EF\\FR_ConsultorioSegurosChubb\\Consultorio_Seguros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
